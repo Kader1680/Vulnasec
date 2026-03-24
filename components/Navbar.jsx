@@ -5,7 +5,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <nav suppressHydrationWarning className="fixed top-0 left-0 right-0 z-50 bg-sentinel-dark/90 backdrop-blur-md border-b border-sentinel-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-sentinel-dark/90 backdrop-blur-md border-b border-sentinel-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14">
           {/* Logo */}
@@ -33,7 +33,7 @@ export default function Navbar() {
           {/* Right side */}
           <div className="flex items-center gap-3">
             {/* Search */}
-            <div className="hidden md:flex items-center bg-input-bg border border-sentinel-border rounded-md px-3 py-1.5 gap-2 w-48">
+            <div className="hidden md:flex items-center bg-[#1A1D26] border border-sentinel-border rounded-md px-3 py-1.5 gap-2 w-48">
               <svg className="w-3.5 h-3.5 text-sentinel-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
@@ -96,7 +96,7 @@ export default function Navbar() {
               </a>
             ))}
             {/* Mobile search */}
-            <div className="flex items-center bg-input-bg border border-sentinel-border rounded-md px-3 py-2 gap-2 mt-2">
+            <div className="flex items-center bg-[#1A1D26] border border-sentinel-border rounded-md px-3 py-2 gap-2 mt-2">
               <svg className="w-3.5 h-3.5 text-sentinel-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>

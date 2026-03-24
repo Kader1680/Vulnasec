@@ -12,12 +12,9 @@ const lines = [
 ]
 
 export default function Terminal() {
-  const [visibleLines, setVisibleLines] = useState(lines.length)
-  const [mounted, setMounted] = useState(false)
+  const [visibleLines, setVisibleLines] = useState(0)
 
   useEffect(() => {
-    setMounted(true)
-    setVisibleLines(0)
     const timers = lines.map((_, i) =>
       setTimeout(() => setVisibleLines(i + 1), 400 + i * 600)
     )
@@ -25,9 +22,9 @@ export default function Terminal() {
   }, [])
 
   return (
-    <div className="bg-terminal-bg border border-terminal-border rounded-xl overflow-hidden shadow-2xl shadow-black/60">
+    <div className="bg-[#0A0C10] border border-[#1E2330] rounded-xl overflow-hidden shadow-2xl shadow-black/60">
       {/* Window chrome */}
-      <div className="flex items-center gap-1.5 px-4 py-3 border-b border-terminal-border bg-terminal-chrome">
+      <div className="flex items-center gap-1.5 px-4 py-3 border-b border-[#1E2330] bg-[#0F1117]">
         <span className="w-3 h-3 rounded-full bg-[#FF5F57]"></span>
         <span className="w-3 h-3 rounded-full bg-[#FFBD2E]"></span>
         <span className="w-3 h-3 rounded-full bg-[#28C840]"></span>
@@ -36,7 +33,7 @@ export default function Terminal() {
 
       {/* Terminal body */}
       <div className="p-5 font-mono text-xs sm:text-sm space-y-2 min-h-[220px]">
-        {lines.slice(0, mounted ? visibleLines : lines.length).map((line, i) => (
+        {lines.slice(0, visibleLines).map((line, i) => (
           <div key={i} className={`transition-all duration-300 ${
             line.type === 'cmd' ? 'text-gray-300' :
             line.type === 'info' ? 'text-gray-400' :
@@ -48,7 +45,7 @@ export default function Terminal() {
             {line.text}
           </div>
         ))}
-        {mounted && visibleLines < lines.length && (
+        {visibleLines < lines.length && (
           <span className="inline-block w-2 h-4 bg-sentinel-blue animate-blink align-middle"></span>
         )}
       </div>

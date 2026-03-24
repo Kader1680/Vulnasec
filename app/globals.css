@@ -16,6 +16,10 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --sentinel-blue: #4A9EFF;
+  --sentinel-dark: #0D0F14;
+  --sentinel-card: #13161D;
+  --sentinel-border: #1E2330;
   }
 }
 

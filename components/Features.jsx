@@ -1,5 +1,5 @@
 const GitHubMockup = () => (
-  <div className="mt-6 bg-github-mockup border border-sentinel-border rounded-lg overflow-hidden text-xs font-mono">
+  <div className="mt-6 bg-[#0D0F14] border border-sentinel-border rounded-lg overflow-hidden text-xs font-mono">
     <div className="px-3 py-2 border-b border-sentinel-border flex items-center gap-2">
       <div className="w-4 h-4 rounded-full bg-sentinel-blue/20 flex items-center justify-center">
         <svg className="w-2.5 h-2.5 text-sentinel-blue" fill="currentColor" viewBox="0 0 24 24">
@@ -7,7 +7,7 @@ const GitHubMockup = () => (
         </svg>
       </div>
       <span className="text-sentinel-muted">Sentinel Bot</span>
-      <span className="text-gray-500 ml-auto">commented on PR #142</span>
+      <span className="text-[#3A3F50] ml-auto">commented on PR #142</span>
     </div>
     <div className="p-3 space-y-1.5">
       <div className="bg-red-500/10 border border-red-500/20 rounded px-2.5 py-2">
@@ -19,7 +19,7 @@ const GitHubMockup = () => (
 )
 
 const AIChip = () => (
-  <div className="mt-6 relative rounded-lg overflow-hidden bg-gradient-to-br from-gradient-from to-gradient-to border border-sentinel-border h-32 flex items-center justify-center">
+  <div className="mt-6 relative rounded-lg overflow-hidden bg-gradient-to-br from-[#1A1D2E] to-[#0D0F14] border border-sentinel-border h-32 flex items-center justify-center">
     <div className="absolute inset-0 opacity-20"
       style={{
         backgroundImage: `linear-gradient(#4A9EFF 1px, transparent 1px), linear-gradient(90deg, #4A9EFF 1px, transparent 1px)`,

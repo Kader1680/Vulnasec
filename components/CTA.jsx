@@ -2,7 +2,7 @@ export default function CTA() {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
-        <div className="relative bg-cta-bg border border-sentinel-border rounded-3xl px-6 sm:px-12 py-16 text-center overflow-hidden">
+        <div className="relative bg-[#151820] border border-sentinel-border rounded-3xl px-6 sm:px-12 py-16 text-center overflow-hidden">
           {/* Background glow */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <div className="w-96 h-48 bg-sentinel-blue/5 rounded-full blur-3xl" />
